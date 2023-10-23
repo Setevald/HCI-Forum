@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    .demo-btn {
+      padding: 10px 30px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #0000FF; 
+      color: #0000FF; 
+      outline: none;
+      border-radius: 30px;
+      margin-top: 10px; 
+      transition: background 0.5s, color 0.5s;
+      text-decoration: none; 
+      display: inline-block;
+    }
+    .form-box h1 {
+      font-size: 24px;
+      margin: 0 0 10px; 
+      color: #ccccc6;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    .demo-btn:hover {
+      background: #0000FF;
+      color: white;
+    }
+  
+    .hero {
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Background.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-box {
+      width: 380px;
+      height: 480px;
+      position: relative;
+      margin: 6% auto;
+      background: #fff;
+      padding: 5px;
+      overflow: hidden;
+    }
+    .button-box{
+        width: 220px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 20px 9px #ff61241f;
+        border-radius: 30px;
+    }
+    
+    .toggle-btn {
+      padding: 10px 30px;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      outline: none;
+      position: relative;
+    }
+
+    #btn{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 110px;
+        height: 100%;
+        background: linear-gradient(to right, #0000FF, #7393B3);
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-group {
+      position: absolute;
+      width: 280px;
+      transition: 0.5s;
+      margin: 20px auto;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px 0;
+      margin: 5px 0;
+      border: none;
+      border-bottom: 1px solid #999;
+      outline: none;
+      background: transparent;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 10px 0;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+      background: linear-gradient(to right, #0000FF, #7393B3);
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      color: white;
+    }
+
+    .check-box {
+      margin: 10px 10px 10px 0;
+    }
+
+    .span {
+      color: #777;
+      font-size: 12px;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+    }
+
+    #login {
+      left: 50px;
+    }
+
+    #register {
+      left: 450px;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust styles for screens with a maximum width of 768px */
+      .form-box {
+        margin: 10% auto;
+        padding: 10px;
+      }
+
+      .input-group {
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="hero">
+        <div class="form-box">
+          <h1 align="Center">Welcome to Bank</h1>
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+            <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User ID" required>
+            <input type="password" class="input-field" placeholder="Enter password" required>
+            <input type="checkbox" class="check-box"> <span>Remember Password</span>
+            <button type="submit" class="submit-btn">Log in</button>
+            <a href="demo-link.html" class="demo-btn">Demo</a>
+        </form>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="User ID" required>
+            <input type="email" class="input-field" placeholder="Email ID" required>
+            <input type="password" class="input-field" placeholder="Enter password" required>
+            <input type="checkbox" class="check-box"> <span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+        </div>
+  </div>
+  
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    function register() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+
+    function login() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0";
+    }
+  </script>
+</body>
+</html>
